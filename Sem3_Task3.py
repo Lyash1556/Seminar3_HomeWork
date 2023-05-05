@@ -8,3 +8,12 @@
 # ноутбук
 # 12
 
+points = {1: 'AEIOULNSTRАВЕИНОРСТ', 2: 'DGДКЛМПУ', 3: 'BCMPБГЁЬЯ', 4: 'FHVWYЙЫ', 5: 'KЖЗХЦЧ', 8: 'JXШЭЮ', 10: 'QZФЩЪ'}
+word = input('Введите любое слово: ').upper()
+count = 0
+for i in word:
+    if i in 'AEIOULNSTRАВЕИНОРСТDGДКЛМПУBCMPБГЁЬЯFHVWYЙЫKЖЗХЦЧJXШЭЮQZФЩЪ':
+        for j in points:
+            if i in points[j]:
+                count += j
+print(f'Ценность слова в баллах - {count}')
