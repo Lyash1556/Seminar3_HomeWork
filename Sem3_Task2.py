@@ -6,4 +6,17 @@
 # Ввод: 8
 # -> 9
 
+n = int(input('Введите количество элементов списка: '))
+list_x = list()
+for i in range(n):
+    a = int(input())
+    list_x.append(a)
 
+x = int(input('Введите число: '))
+max = abs(x - list_x[0])
+num = list_x[0]
+for i in range(1, len(list_x)):
+    if max > abs(list_x[i] - x):
+        max = abs(list_x[i] - x)
+        num = list_x[i]    
+print(f'Самое близкое к _{x}_ в списке является число _{num}_')
